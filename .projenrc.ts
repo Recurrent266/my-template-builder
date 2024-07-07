@@ -20,7 +20,7 @@ const PROJECT = new cdk.JsiiProject({
   jsiiVersion: '~5.3.0',
   github: false,
   name: 'kfintech-projen-projects',
-  packageName: '@kfintech/kfintech-projen-projects',
+  packageName: 'kfintech-projen-projects',
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/Recurrent266/my-template-builder.git',
@@ -75,7 +75,7 @@ PROJECT.gitignore.addPatterns(
   'samples/target/',
   '!/tsconfig.json',
   'package-lock.json',
-  '!/.jsii',
+  '!/.jsii'
 );
 
 PROJECT.tsconfigDev.addExclude('samples');
