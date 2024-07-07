@@ -49,4 +49,5 @@ tsconfig.json
 samples/target/
 !/tsconfig.json
 package-lock.json
+!/.jsii
 !/.projenrc.ts

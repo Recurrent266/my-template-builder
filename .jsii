@@ -1,0 +1,416 @@
+{
+  "author": {
+    "email": "kfintech@example.com",
+    "name": "kfintech",
+    "roles": [
+      "author"
+    ]
+  },
+  "bundled": {
+    "@types/js-yaml": "^4.0.9",
+    "js-yaml": "^4.1.0"
+  },
+  "dependencies": {
+    "constructs": "^10.3.0",
+    "projen": "^0.81.16"
+  },
+  "dependencyClosure": {
+    "constructs": {
+      "targets": {
+        "dotnet": {
+          "namespace": "Constructs",
+          "packageId": "Constructs"
+        },
+        "go": {
+          "moduleName": "github.com/aws/constructs-go"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "constructs",
+            "groupId": "software.constructs"
+          },
+          "package": "software.constructs"
+        },
+        "js": {
+          "npm": "constructs"
+        },
+        "python": {
+          "distName": "constructs",
+          "module": "constructs"
+        }
+      }
+    },
+    "projen": {
+      "submodules": {
+        "projen.awscdk": {},
+        "projen.build": {},
+        "projen.cdk": {},
+        "projen.cdk8s": {},
+        "projen.cdktf": {},
+        "projen.circleci": {},
+        "projen.github": {},
+        "projen.github.workflows": {},
+        "projen.gitlab": {},
+        "projen.java": {},
+        "projen.javascript": {},
+        "projen.python": {},
+        "projen.release": {},
+        "projen.typescript": {},
+        "projen.vscode": {},
+        "projen.web": {}
+      },
+      "targets": {
+        "go": {
+          "moduleName": "github.com/projen/projen-go"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "projen",
+            "groupId": "io.github.cdklabs"
+          },
+          "package": "io.github.cdklabs.projen"
+        },
+        "js": {
+          "npm": "projen"
+        },
+        "python": {
+          "distName": "projen",
+          "module": "projen"
+        }
+      }
+    }
+  },
+  "description": "@kfintech/kfintech-projen-projects",
+  "docs": {
+    "stability": "stable"
+  },
+  "homepage": "git.kfintech.com/kfintech-projen-projects",
+  "jsiiVersion": "5.3.37 (build c365bc1)",
+  "license": "Apache-2.0",
+  "metadata": {
+    "jsii": {
+      "pacmak": {
+        "hasDefaultInterfaces": true
+      }
+    },
+    "tscRootDir": "src"
+  },
+  "name": "@kfintech/kfintech-projen-projects",
+  "readme": {
+    "markdown": "# Projen Templates for NestJS Microservice\n## About the Repository\n\n- This repository contains Projen templates for generating a NestJS-based microservice. Projen ships with default project types such as `typescript` and `typescript-app`. This project extends the Projen built-in `typescript-app` and builds a custom Projen project type (`kfintech-nestjs-app`).\n\n## Commands to generate a Micro-service project using this projen template\n\n1. Clone the repository:\n\n   > git clone <https://kfintech-projen-projects.git.kfintech.git>\n\n2. Navigate to your project directory:\n\n   > cd kfintech-projen-projects\n\n3. Install dependencies:\n\n   > npm install\n\n4. Build the project. This will compile the TypeScript project into the dist folder:\n\n   > npm run build\n\n5. Developers can create a sample microservice using the command from home dir:\n   > npx projen new kfintech-nestjs-app --from file:{path to kfintech-projen-projects} --outdir ~/test-microservice\n\n#### Additional optional parameters can be passed while creating the kfintech-nestjs-app:\n\nExample:\n\n```\nnpx projen new kfintech-nestjs-app \\\n --from file:{path to kfintech-projen-projects} \\\n --outdir=~/test-microservice\n --projectName=panCheckAPI \\\n --lib true \\\n --contract true\n```\n\n- #### --from:\n\n  This is the path where you have cloned this kfintech-projen-projects repository.\n\n- #### --outdir:\n\n  This is the directory path where projen will generate the microservice.\n\n- #### --lib:\n\n  Adds a library to the NestJS project. Value should be true or false.\n\n- #### --projectName:\n\n  Use this to give a name to your project files and folders. Do not use 'app' as the name 'app' is reserved in the NestJS framework.\n\n- #### --contract:\n\n  Adds a contract testing file for the microservice as the provider API. Value should be true or false.\n\n  Sample contract test is generated in the file test/${projectName}/${projectName}.contract-spec.ts.\n\n  All contract tests should follow the file name pattern: ${projectName}.contract-spec.ts.\n\n  Follow these steps to run the contract tests:\n\n  - Run pactum-flow-server in the test/hello/contract folder: `docker compose up`\n  - Run the microservice: `npm run docker:run`\n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git.kfintech.com/kfintech-projen-projects"
+  },
+  "schema": "jsii/0.10.0",
+  "targets": {
+    "js": {
+      "npm": "@kfintech/kfintech-projen-projects"
+    }
+  },
+  "types": {
+    "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProject": {
+      "assembly": "@kfintech/kfintech-projen-projects",
+      "base": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject",
+      "docs": {
+        "custom": {
+          "pjid": "kfintech-nestjs-app"
+        },
+        "stability": "stable",
+        "summary": "Create a [NestJS](https://docs.nestjs.com) TypeScript project."
+      },
+      "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProject",
+      "initializer": {
+        "docs": {
+          "stability": "stable"
+        },
+        "locationInModule": {
+          "filename": "src/kfintech-nestjs-app-project.ts",
+          "line": 56
+        },
+        "parameters": [
+          {
+            "name": "options",
+            "type": {
+              "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "src/kfintech-nestjs-app-project.ts",
+        "line": 55
+      },
+      "name": "KFinTechNestJSAppProject",
+      "symbolId": "src/kfintech-nestjs-app-project:KFinTechNestJSAppProject"
+    },
+    "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions": {
+      "assembly": "@kfintech/kfintech-projen-projects",
+      "datatype": true,
+      "docs": {
+        "stability": "stable"
+      },
+      "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions",
+      "interfaces": [
+        "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions"
+      ],
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "src/kfintech-nestjs-app-project.ts",
+        "line": 23
+      },
+      "name": "KFinTechNestJSAppProjectOptions",
+      "properties": [
+        {
+          "abstract": true,
+          "docs": {
+            "default": "true",
+            "stability": "stable",
+            "summary": "Add provider part of contract testing to NestJS project."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-nestjs-app-project.ts",
+            "line": 47
+          },
+          "name": "contract",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "default": "true",
+            "stability": "stable",
+            "summary": "Add a library to NestJS project."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-nestjs-app-project.ts",
+            "line": 39
+          },
+          "name": "lib",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "default": "hello",
+            "stability": "stable",
+            "summary": "Name to different files like controller, service, module."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-nestjs-app-project.ts",
+            "line": 31
+          },
+          "name": "projectName",
+          "optional": true,
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ],
+      "symbolId": "src/kfintech-nestjs-app-project:KFinTechNestJSAppProjectOptions"
+    },
+    "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase": {
+      "assembly": "@kfintech/kfintech-projen-projects",
+      "docs": {
+        "stability": "stable"
+      },
+      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase",
+      "kind": "enum",
+      "locationInModule": {
+        "filename": "src/kfintech-typescript-app-project.ts",
+        "line": 31
+      },
+      "members": [
+        {
+          "docs": {
+            "stability": "stable"
+          },
+          "name": "NODE_VERSION"
+        }
+      ],
+      "name": "KFinTechTSConfigBase",
+      "symbolId": "src/kfintech-typescript-app-project:KFinTechTSConfigBase"
+    },
+    "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject": {
+      "assembly": "@kfintech/kfintech-projen-projects",
+      "base": "projen.typescript.TypeScriptAppProject",
+      "docs": {
+        "custom": {
+          "pjid": "kfintech-typescript-app"
+        },
+        "stability": "stable",
+        "summary": "Create a [TypeScriptAppProject]."
+      },
+      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject",
+      "initializer": {
+        "docs": {
+          "stability": "stable"
+        },
+        "locationInModule": {
+          "filename": "src/kfintech-typescript-app-project.ts",
+          "line": 54
+        },
+        "parameters": [
+          {
+            "name": "options",
+            "type": {
+              "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "src/kfintech-typescript-app-project.ts",
+        "line": 53
+      },
+      "name": "KFinTechTypeScriptAppProject",
+      "symbolId": "src/kfintech-typescript-app-project:KFinTechTypeScriptAppProject"
+    },
+    "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions": {
+      "assembly": "@kfintech/kfintech-projen-projects",
+      "datatype": true,
+      "docs": {
+        "stability": "stable"
+      },
+      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions",
+      "interfaces": [
+        "projen.typescript.TypeScriptProjectOptions"
+      ],
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "src/kfintech-typescript-app-project.ts",
+        "line": 35
+      },
+      "name": "KFinTechTypeScriptAppProjectOptions",
+      "properties": [
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 38
+          },
+          "name": "addDefaultBundle",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 41
+          },
+          "name": "eslintFixableAsWarn",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 40
+          },
+          "name": "esmSupportConfig",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 42
+          },
+          "name": "nodeVersion",
+          "optional": true,
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 43
+          },
+          "name": "tsconfigBase",
+          "optional": true,
+          "type": {
+            "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 44
+          },
+          "name": "tsconfigBaseDev",
+          "optional": true,
+          "type": {
+            "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "stability": "stable"
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "src/kfintech-typescript-app-project.ts",
+            "line": 45
+          },
+          "name": "tsconfigBaseStrictest",
+          "optional": true,
+          "type": {
+            "primitive": "boolean"
+          }
+        }
+      ],
+      "symbolId": "src/kfintech-typescript-app-project:KFinTechTypeScriptAppProjectOptions"
+    }
+  },
+  "version": "0.0.0",
+  "fingerprint": "vsAN74ySPi+pkmTsJPSmVkxTCVU4Yn4FYYze3Ntorwc="
+}
