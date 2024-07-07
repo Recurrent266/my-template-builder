@@ -75,7 +75,7 @@ PROJECT.gitignore.addPatterns(
   'samples/target/',
   '!/tsconfig.json',
   'package-lock.json',
-  '!/.jsii'
+  '!/.jsii',
 );
 
 PROJECT.tsconfigDev.addExclude('samples');
