@@ -84,7 +84,7 @@
   "docs": {
     "stability": "stable"
   },
-  "homepage": "git.kfintech.com/kfintech-projen-projects",
+  "homepage": "https://github.com/Recurrent266/my-template-builder.git",
   "jsiiVersion": "5.3.37 (build c365bc1)",
   "license": "Apache-2.0",
   "metadata": {
@@ -101,7 +101,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git.kfintech.com/kfintech-projen-projects"
+    "url": "https://github.com/Recurrent266/my-template-builder.git"
   },
   "schema": "jsii/0.10.0",
   "targets": {
@@ -412,5 +412,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "vsAN74ySPi+pkmTsJPSmVkxTCVU4Yn4FYYze3Ntorwc="
+  "fingerprint": "jtS9+Hanzi1C8MZoJLiFCGY0njpriLpCceEcg9w4Vgg="
 }
