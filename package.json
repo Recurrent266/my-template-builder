@@ -1,8 +1,8 @@
 {
-  "name": "kfintech-projen-projects",
+  "name": "@kfintech/kfintech-projen-projects",
   "repository": {
     "type": "git",
-    "url": "kfintech-projen-projects"
+    "url": "https://github.com/Recurrent266/my-template-builder.git"
   },
   "scripts": {
     "build": "npx projen build",
