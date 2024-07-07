@@ -69,7 +69,12 @@ if (PROJECT.jest) {
   );
 }
 PROJECT.addBundledDeps('js-yaml', '@types/js-yaml');
-PROJECT.gitignore.addPatterns('.idea/', 'samples/target/', '!/tsconfig.json', 'package-lock.json');
+PROJECT.gitignore.addPatterns(
+  '.idea/',
+  'samples/target/',
+  '!/tsconfig.json',
+  'package-lock.json',
+);
 
 PROJECT.tsconfigDev.addExclude('samples');
 
