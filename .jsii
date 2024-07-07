@@ -80,7 +80,7 @@
       }
     }
   },
-  "description": "@kfintech/kfintech-projen-projects",
+  "description": "template_builder",
   "docs": {
     "stability": "stable"
   },
@@ -95,7 +95,7 @@
     },
     "tscRootDir": "src"
   },
-  "name": "@kfintech/kfintech-projen-projects",
+  "name": "template_builder",
   "readme": {
     "markdown": "# Projen Templates for NestJS Microservice\n## About the Repository\n\n- This repository contains Projen templates for generating a NestJS-based microservice. Projen ships with default project types such as `typescript` and `typescript-app`. This project extends the Projen built-in `typescript-app` and builds a custom Projen project type (`kfintech-nestjs-app`).\n\n## Commands to generate a Micro-service project using this projen template\n\n1. Clone the repository:\n\n   > git clone <https://kfintech-projen-projects.git.kfintech.git>\n\n2. Navigate to your project directory:\n\n   > cd kfintech-projen-projects\n\n3. Install dependencies:\n\n   > npm install\n\n4. Build the project. This will compile the TypeScript project into the dist folder:\n\n   > npm run build\n\n5. Developers can create a sample microservice using the command from home dir:\n   > npx projen new kfintech-nestjs-app --from file:{path to kfintech-projen-projects} --outdir ~/test-microservice\n\n#### Additional optional parameters can be passed while creating the kfintech-nestjs-app:\n\nExample:\n\n```\nnpx projen new kfintech-nestjs-app \\\n --from file:{path to kfintech-projen-projects} \\\n --outdir=~/test-microservice\n --projectName=panCheckAPI \\\n --lib true \\\n --contract true\n```\n\n- #### --from:\n\n  This is the path where you have cloned this kfintech-projen-projects repository.\n\n- #### --outdir:\n\n  This is the directory path where projen will generate the microservice.\n\n- #### --lib:\n\n  Adds a library to the NestJS project. Value should be true or false.\n\n- #### --projectName:\n\n  Use this to give a name to your project files and folders. Do not use 'app' as the name 'app' is reserved in the NestJS framework.\n\n- #### --contract:\n\n  Adds a contract testing file for the microservice as the provider API. Value should be true or false.\n\n  Sample contract test is generated in the file test/${projectName}/${projectName}.contract-spec.ts.\n\n  All contract tests should follow the file name pattern: ${projectName}.contract-spec.ts.\n\n  Follow these steps to run the contract tests:\n\n  - Run pactum-flow-server in the test/hello/contract folder: `docker compose up`\n  - Run the microservice: `npm run docker:run`\n"
   },
@@ -106,13 +106,13 @@
   "schema": "jsii/0.10.0",
   "targets": {
     "js": {
-      "npm": "@kfintech/kfintech-projen-projects"
+      "npm": "template_builder"
     }
   },
   "types": {
-    "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProject": {
-      "assembly": "@kfintech/kfintech-projen-projects",
-      "base": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject",
+    "template_builder.KFinTechNestJSAppProject": {
+      "assembly": "template_builder",
+      "base": "template_builder.KFinTechTypeScriptAppProject",
       "docs": {
         "custom": {
           "pjid": "kfintech-nestjs-app"
@@ -120,7 +120,7 @@
         "stability": "stable",
         "summary": "Create a [NestJS](https://docs.nestjs.com) TypeScript project."
       },
-      "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProject",
+      "fqn": "template_builder.KFinTechNestJSAppProject",
       "initializer": {
         "docs": {
           "stability": "stable"
@@ -133,7 +133,7 @@
           {
             "name": "options",
             "type": {
-              "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions"
+              "fqn": "template_builder.KFinTechNestJSAppProjectOptions"
             }
           }
         ]
@@ -146,15 +146,15 @@
       "name": "KFinTechNestJSAppProject",
       "symbolId": "src/kfintech-nestjs-app-project:KFinTechNestJSAppProject"
     },
-    "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions": {
-      "assembly": "@kfintech/kfintech-projen-projects",
+    "template_builder.KFinTechNestJSAppProjectOptions": {
+      "assembly": "template_builder",
       "datatype": true,
       "docs": {
         "stability": "stable"
       },
-      "fqn": "@kfintech/kfintech-projen-projects.KFinTechNestJSAppProjectOptions",
+      "fqn": "template_builder.KFinTechNestJSAppProjectOptions",
       "interfaces": [
-        "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions"
+        "template_builder.KFinTechTypeScriptAppProjectOptions"
       ],
       "kind": "interface",
       "locationInModule": {
@@ -220,12 +220,12 @@
       ],
       "symbolId": "src/kfintech-nestjs-app-project:KFinTechNestJSAppProjectOptions"
     },
-    "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase": {
-      "assembly": "@kfintech/kfintech-projen-projects",
+    "template_builder.KFinTechTSConfigBase": {
+      "assembly": "template_builder",
       "docs": {
         "stability": "stable"
       },
-      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase",
+      "fqn": "template_builder.KFinTechTSConfigBase",
       "kind": "enum",
       "locationInModule": {
         "filename": "src/kfintech-typescript-app-project.ts",
@@ -242,8 +242,8 @@
       "name": "KFinTechTSConfigBase",
       "symbolId": "src/kfintech-typescript-app-project:KFinTechTSConfigBase"
     },
-    "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject": {
-      "assembly": "@kfintech/kfintech-projen-projects",
+    "template_builder.KFinTechTypeScriptAppProject": {
+      "assembly": "template_builder",
       "base": "projen.typescript.TypeScriptAppProject",
       "docs": {
         "custom": {
@@ -252,7 +252,7 @@
         "stability": "stable",
         "summary": "Create a [TypeScriptAppProject]."
       },
-      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProject",
+      "fqn": "template_builder.KFinTechTypeScriptAppProject",
       "initializer": {
         "docs": {
           "stability": "stable"
@@ -265,7 +265,7 @@
           {
             "name": "options",
             "type": {
-              "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions"
+              "fqn": "template_builder.KFinTechTypeScriptAppProjectOptions"
             }
           }
         ]
@@ -278,13 +278,13 @@
       "name": "KFinTechTypeScriptAppProject",
       "symbolId": "src/kfintech-typescript-app-project:KFinTechTypeScriptAppProject"
     },
-    "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions": {
-      "assembly": "@kfintech/kfintech-projen-projects",
+    "template_builder.KFinTechTypeScriptAppProjectOptions": {
+      "assembly": "template_builder",
       "datatype": true,
       "docs": {
         "stability": "stable"
       },
-      "fqn": "@kfintech/kfintech-projen-projects.KFinTechTypeScriptAppProjectOptions",
+      "fqn": "template_builder.KFinTechTypeScriptAppProjectOptions",
       "interfaces": [
         "projen.typescript.TypeScriptProjectOptions"
       ],
@@ -372,7 +372,7 @@
           "name": "tsconfigBase",
           "optional": true,
           "type": {
-            "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase"
+            "fqn": "template_builder.KFinTechTSConfigBase"
           }
         },
         {
@@ -388,7 +388,7 @@
           "name": "tsconfigBaseDev",
           "optional": true,
           "type": {
-            "fqn": "@kfintech/kfintech-projen-projects.KFinTechTSConfigBase"
+            "fqn": "template_builder.KFinTechTSConfigBase"
           }
         },
         {
@@ -412,5 +412,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "jtS9+Hanzi1C8MZoJLiFCGY0njpriLpCceEcg9w4Vgg="
+  "fingerprint": "6z42gQSkmML6SASebm5rrWvTVl4d4tB61wkav64Po7o="
 }
