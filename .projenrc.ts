@@ -24,6 +24,7 @@ const PROJECT = new cdk.JsiiProject({
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/Recurrent266/my-template-builder.git',
+  repository: 'https://github.com/Recurrent266/my-template-builder.git',
   eslint: true,
   prettier: true,
   projenVersion: '>=0.79.23',
