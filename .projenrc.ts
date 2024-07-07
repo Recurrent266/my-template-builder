@@ -23,7 +23,7 @@ const PROJECT = new cdk.JsiiProject({
   packageName: 'kfintech-projen-projects',
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/Recurrent266/my-template-builder.git',
+  repositoryUrl: 'kfintech-projen-projects',
   eslint: true,
   prettier: true,
   projenVersion: '>=0.79.23',
