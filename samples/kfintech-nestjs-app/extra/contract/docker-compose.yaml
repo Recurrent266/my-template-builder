@@ -1,0 +1,14 @@
+services:
+  # _________________________________
+  # Pactum Flow Server
+  flows:
+    container_name: pactum_flow_server
+    image: 'pactumjs/flows:latest'
+    ports:
+      - '8080:8080'
+    environment:
+      - 'DB_HOST=mongo'
+  mongo:
+    container_name: pactum_flow_database
+    image: 'mongo:4.2.12'
+  # _________________________________
